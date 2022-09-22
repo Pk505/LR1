@@ -1,0 +1,42 @@
+#include <iostream>
+
+int main()
+{  
+    float a;
+    float b;
+    float c;
+    float biggest_side;
+    float side_1;
+    float side_2;
+
+    std::cout << "Input first side: ";
+    std::cin >> a;
+    std::cout << "Input second side: ";
+    std::cin >> b;
+    std::cout << "Input third side: ";
+    std::cin >> c;
+    
+    if ((a >= b) and (a >= c)) {
+        biggest_side = a;
+        side_1 = b;
+        side_2 = c;
+} else if ((b >= c) and (b >= a)) {
+        biggest_side = b;
+        side_1 = a;
+        side_2 = c;
+} else if ((c >= b) and (c >= a)) {
+        biggest_side = c;
+        side_1 = a;
+        side_2 = b;
+}
+   
+    if (biggest_side * biggest_side > side_1 * side_1 + side_2 * side_2) {
+        std::cout << "Obtuse" << std::endl;
+} else if (biggest_side * biggest_side < side_1 * side_1 + side_2 * side_2) {
+        std::cout << "Sharp" << std::endl;
+} else {
+        std::cout << "Rectangular" << std::endl;
+}
+
+    return 0;
+}
