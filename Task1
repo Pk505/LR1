@@ -1,0 +1,19 @@
+#include <iostream>
+
+int main()
+{  
+    float radians;
+    float degrees;
+    float minutes;
+    float seconds;
+
+    std::cout << "Input angle in radians: ";
+    std::cin >> radians;
+    degrees = radians * 57.3;
+    minutes = degrees * 60;
+    seconds = minutes * 60;
+    
+    
+    std::cout << "This angle in degrees: " << degrees << "\t Minutes: " << minutes << "\t Seconds: " << seconds << std::endl;
+    return 0;
+}
